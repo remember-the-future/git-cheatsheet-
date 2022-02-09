@@ -14,6 +14,7 @@ Cheatsheet for git
 Set name: `git config --global user.name "<your_name>"`
 Set email: `git config --global user.email <your_email>`
 List config: `git config --global --list`
+remove `--global` to make a change in local git repository
 
 ## New project
 
@@ -45,7 +46,7 @@ Show master commit `git show master`
 
 ## Commit
 
-Add to local repository: `git commit -m"<commit_message>"`
+Add to local repository: `git commit -m "<commit_message>"`
 
 Add to local repository keep same commit: `git commit --amend"`
 
@@ -55,6 +56,8 @@ Add to local repository keep same commit: `git commit --amend"`
 tag `master` last commit of a given branch
 
 tag `head` current commit on which we are
+
+tag `origin/master` last commit of the remote repository
 
 
 ## Move
@@ -75,9 +78,29 @@ Other option `git tag <tag_name> -m"<tag_message>"`
 
 Delete tag `git tag --delete <tag_name>`
 
-Show tags `git tag`
+List tags `git tag`
 
 # Github
+
+Clone git repository from github (remote origin created automatically) `git clone <repository_url> <new_folder_name>`
+
+List remotes: `git remote -v`
+
+Show remote details: `git remote show <remote_name>`
+
+Add remote: `git remote add <remote_name> <repository_url>`
+
+Push commits: `git push -u <remote_name> <branch_name>`
+example `git push -u origin master`
+`<remote_name>` is optionnal defaul is `origin`
+
+Push tag: `git push <remote_name> <tag_name>`
+
+Push all tags: `git push <remote_name> --tags`
+
+Fetch changes `git fetch` get the commits + tags + moves tag `origin/master`
+
+Pull changes `git pull` perform `git fetch` + moves tag `master`
 
 # Branches
 
