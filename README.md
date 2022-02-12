@@ -44,6 +44,8 @@ Show specific commit `git show <commit_SHA-1>`
 
 Show master commit `git show master`
 
+Show history within file (from line 10 to line 20) `git blame -L 10,20 <file_name>` ou `-L 10
+
 ## Commit
 
 Add to local repository: `git commit -m "<commit_message>"`
@@ -101,6 +103,12 @@ Push all tags: `git push <remote_name> --tags`
 Fetch changes `git fetch` get the commits + tags + moves tag `origin/master`
 
 Pull changes `git pull` perform `git fetch` + moves tag `master`
+
+use .gitignore
+example
+```tmp/todo.txt
+tmp/*
+*.txt```
 
 # Branches
 
