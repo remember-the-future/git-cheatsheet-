@@ -3,24 +3,43 @@ Cheatsheet for git
 
 # Index
 1. [Basics](#basic)
-2. [Branches](#branches)
+2. [Github](#github)
+3. [Branches](#branches)
 
 
 # Basics
 
+## Download
 
-## Configuration
+https://git-scm.com/downloads
 
-Set name: `git config --global user.name "<your_name>"`
-Set email: `git config --global user.email <your_email>`
-List config: `git config --global --list`
-remove `--global` to make a change in local git repository
+
+## Configuration settings
+
+settings level:
+- `system` -> all users
+- `global` -> all repositories of the current user
+- `local` -> current repository (default)
+
+Set name: `git config --global user.name "<your name>"`\
+Set email: `git config --global user.email <your_email>`\
+\
+Set editor: VS code `git config --global core.editor "code --wait"`  # git will wait for VS code to be closed before to allow a new command\
+Edit all settings: `git config --global -e`\
+List config: `git config --global --list`\
+Set end of lines Mac/Linux: `git config --global core.autocrlf input`
+Set end of lines Windows: `git config --global core.autocrlf true`
+
 
 ## New project
 
 Initialisation: `git init`
 
 Initialisation + add repository: `git init <repository_name>`
+
+Recommanded installations: 
+- `Zsh` with git pluging (Mac)
+- `posh-git` (Windows)
 
 ## Manage files
 
